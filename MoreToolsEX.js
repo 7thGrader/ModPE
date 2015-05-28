@@ -1,10 +1,10 @@
 //ExtraToolsEX ver 1.1.0 Stable
 //by 7thGrader
-var version = "1.1.0";
+var version = "1.1.0b";
 
 function newLevel()
 {
-clientMessage("MoreToolsEX 1.1.0 Stable by 7thGrader Loaded!");
+clientMessage("MoreToolsEX 1.1.0b Stable by 7thGrader Loaded!");
 }
 
 ModPE.setItem(407, "ruby", 0, "PowerGem");
