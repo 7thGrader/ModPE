@@ -1,10 +1,12 @@
-//ExtraToolsEX ver 1.1.0 Stable
+//MoreToolsEX ver 1.1.1b dev2 soft
 //by 7thGrader
-var version = "1.1.0b";
+var author = "7thGrader";
+var version = "1.1.1b dev2";
 
 function newLevel()
 {
-clientMessage("MoreToolsEX 1.1.0b Stable by 7thGrader Loaded!");
+clientMessage("MoreToolsEX 1.1.1b Dev-Build 1 by 7thGrader Loaded!");
+clientMessage("Warning : This version may contain some bugs!");
 }
 
 ModPE.setItem(407, "ruby", 0, "PowerGem");
@@ -32,6 +34,7 @@ explode(x,y,z,5);
 }
 if (i == 410)
 {
+clientMessage("Flight Enabled!");
 Player.setCanFly(1/0);
 }
 if (i == 411)
@@ -51,3 +54,7 @@ if (i == 414)
 Level.destroyBlock(x,y,z,true)
 }
 }
+
+/*
+Tested : 3cf975f47c7489ff5565e72b19db581c
+*/
