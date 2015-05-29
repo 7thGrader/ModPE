@@ -1,7 +1,7 @@
-//MoreToolsEX ver 1.1.1b dev1
+//MoreToolsEX ver 1.1.1b dev2 soft
 //by 7thGrader
 var author = "7thGrader";
-var version = "1.1.1b dev1";
+var version = "1.1.1b dev2";
 
 function newLevel()
 {
@@ -54,3 +54,7 @@ if (i == 414)
 Level.destroyBlock(x,y,z,true)
 }
 }
+
+/*
+Tested : 3cf975f47c7489ff5565e72b19db581c
+*/
