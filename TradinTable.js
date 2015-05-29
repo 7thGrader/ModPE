@@ -1,13 +1,14 @@
-//TradinTable 1.1.4b Stable
+//TradinTable 1.1.5b dev2 soft
 //by 7thGrader
 
 //Orig. : http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1286564-equivalent-exchange-3-0-1-142
 
-var version = "1.1.4b";
+var version = "1.1.5b dev2";
 
 function newLevel()
 {
-clientMessage("TradinTable 1.1.4b Stable by 7thGrader Loaded!");
+clientMessage("TradinTable 1.1.5b Dev-Build 2 by 7thGrader Loaded!");
+clientMessage("This build is soft version. most likely to no bugs but still in-development.");
 }
 
 //Crafting Recipe Spam.
@@ -53,3 +54,5 @@ Item.addShapedRecipe(265, 1, 0, ["iii", "imi", "iii"], ["i", 86, 0, "m", 341, 0]
 Item.addShapedRecipe(86, 8, 0, ["im ", "   ", "   "], ["i", 265, 0, "m", 341, 0]);
 Item.addShapedRecipe(17, 8, 0, ["im ", "   ", "   "], ["i", 6, 0, "m", 341, 0]);
 Item.addShapedRecipe(6, 8, 0, ["mii", "iii", "iii"], ["i", 17, 0, "m", 341, 0]);
+Item.addShapedRecipe(19, 8, 0, ["mi ", "   ", "   "], ["i", 264, 0, "m", 341, 0]);
+Item.addShapedRecipe(264, 1, 0, ["mii", "iii", "iii"], ["i", 19, 0, "m", 341, 0]);
