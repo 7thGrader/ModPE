@@ -1,4 +1,4 @@
-//ExtraToolsEX ver 1.1.0 Stable
+//MoreToolsEX ver 1.1.0 Stable
 //by 7thGrader
 var version = "1.1.0b";
 
