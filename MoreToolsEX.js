@@ -1,10 +1,12 @@
-//ExtraToolsEX ver 1.1.0 Stable
+//MoreToolsEX ver 1.1.1b dev1
 //by 7thGrader
-var version = "1.1.0b";
+var author = "7thGrader";
+var version = "1.1.1b dev1";
 
 function newLevel()
 {
-clientMessage("MoreToolsEX 1.1.0b Stable by 7thGrader Loaded!");
+clientMessage("MoreToolsEX 1.1.1b Dev-Build 1 by 7thGrader Loaded!");
+clientMessage("Warning : This version may contain some bugs!");
 }
 
 ModPE.setItem(407, "ruby", 0, "PowerGem");
@@ -32,6 +34,7 @@ explode(x,y,z,5);
 }
 if (i == 410)
 {
+clientMessage("Flight Enabled!");
 Player.setCanFly(1/0);
 }
 if (i == 411)
