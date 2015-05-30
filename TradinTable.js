@@ -1,4 +1,4 @@
-//TradinTable 1.1.5b dev2 soft
+//TradinTable 1.2b dev1
 //by 7thGrader
 /*
    Copyright 2015 7thGrader
@@ -11,12 +11,17 @@
 */
 //Orig. : http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1286564-equivalent-exchange-3-0-1-142
 
-var version = "1.1.5b dev2";
+var version = "1.2b dev1";
 
 function newLevel()
 {
-clientMessage("TradinTable 1.1.5b Dev-Build 2 by 7thGrader Loaded!");
-clientMessage("This build is soft version. most likely to no bugs but still in-development.");
+clientMessage("TradinTable 1.2b Dev-Build 1 by 7thGrader Loaded!");
+clientMessage("Warning : This version may contain some bugs!");
+}
+
+function useItem(x,y,z,i,b);
+{
+//todo : use slimeball to directly convert placed block
 }
 
 //Crafting Recipe Spam.
