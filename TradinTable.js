@@ -100,3 +100,5 @@ Item.addShapedRecipe(17, 8, 0, ["im ", "   ", "   "], ["i", 6, 0, "m", 341, 0]);
 Item.addShapedRecipe(6, 8, 0, ["mii", "iii", "iii"], ["i", 17, 0, "m", 341, 0]);
 Item.addShapedRecipe(19, 8, 0, ["mi ", "   ", "   "], ["i", 264, 0, "m", 341, 0]);
 Item.addShapedRecipe(264, 1, 0, ["mii", "iii", "iii"], ["i", 19, 0, "m", 341, 0]);
+
+// Tested : 765becdb51d48846877b94a27f53ae22
