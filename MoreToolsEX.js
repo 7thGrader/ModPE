@@ -1,4 +1,4 @@
-//MoreToolsEX ver 1.1.1b dev2 soft
+//MoreToolsEX ver 1.1.1b dev3
 //by 7thGrader
 /*
    Copyright 2015 7thGrader
@@ -10,23 +10,29 @@
        http://www.apache.org/licenses/LICENSE-2.0
 */
 var author = "7thGrader";
-var version = "1.1.1b dev2";
+var version = "1.1.1b dev3";
 
 function newLevel()
 {
-clientMessage("MoreToolsEX 1.1.1b Dev-Build 1 by 7thGrader Loaded!");
+clientMessage("MoreToolsEX 1.1.1b Dev-Build 3 by 7thGrader Loaded!");
 clientMessage("Warning : This version may contain some bugs!");
 }
 
-ModPE.setItem(407, "ruby", 0, "PowerGem");
-ModPE.setFoodItem(408,"magma_cream",0, 9001,"InstaHeal");
-ModPE.setItem(409, "blaze_rod", 0, "SuperStick");
-ModPE.setItem(410, "ender_eye", 0, "EnderWings");
-ModPE.setItem(411, "book_enchanted", 0, "TimeSpellFast");
-ModPE.setItem(412, "book_enchanted", 0, "TimeSpellNormal");
-ModPE.setItem(413, "book_enchanted", 0, "TimeSpellSlow");
-ModPE.setItem(414, "nether_star", 0, "BlockExtractor");
+//setitem
+ModPE.setItem(407, "ruby", 0, "Power Gem");
+ModPE.setFoodItem(408,"magma_cream",0, 9001,"Insta-Heal");
+ModPE.setItem(409, "blaze_rod", 0, "Super Stick");
+ModPE.setItem(410, "ender_eye", 0, "Ender Wings");
+ModPE.setItem(411, "book_enchanted", 0, "TimeSpell(Fast)");
+ModPE.setItem(412, "book_enchanted", 0, "TimeSpell(Normal)");
+ModPE.setItem(413, "book_enchanted", 0, "TimeSpell(Slow)");
+ModPE.setItem(414, "nether_star", 0, "Block Extractor");
+
+//Making Power Gem and Reverting
 Item.addFurnaceRecipe(57, 407, 1);
+Item.addFurnaceRecipe(407, 57, 1);
+
+//tools recipe
 Item.addShapedRecipe(408, 32, 0, ["ttt", "jpj", "ttt"], ["j", 407, 0, "t", 354, 0, "p", 293, 0]);
 Item.addShapedRecipe(409, 1, 0, ["jpj", "tjt", "jjj"], ["j", 407, 0, "t", 46, 0, "p", 278, 0]);
 Item.addShapedRecipe(410, 1, 0, ["jlj", "ltl", "jjj"], ["j", 407, 0, "t", 276, 0, "l", 325, 10]);
@@ -35,6 +41,7 @@ Item.addShapedRecipe(412, 1, 0, ["jlj", "ltl", "jjj"], ["j", 407, 0, "t", 279, 0
 Item.addShapedRecipe(413, 1, 0, ["jlj", "ltl", "jjj"], ["j", 407, 0, "t", 247, 0, "l", 347, 0]);
 Item.addShapedRecipe(414, 1, 0, ["jlj", "ltl", "jjj"], ["j", 407, 0, "t", 278, 0, "l", 388, 0]);
 
+//effect
 function useItem(x,y,z,i,b)
 {
 if (i == 409)
