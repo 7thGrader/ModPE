@@ -1,4 +1,4 @@
-//TradinTable 1.2b dev1
+//TradinTable 1.2b dev29 soft
 //by 7thGrader
 /*
    Copyright 2015 7thGrader
@@ -11,18 +11,49 @@
 */
 //Orig. : http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1286564-equivalent-exchange-3-0-1-142
 
-var version = "1.2b dev1";
+var version = "1.2";
+var beta = true;
+var dev = 29
 
 function newLevel()
 {
-clientMessage("TradinTable 1.2b Dev-Build 1 by 7thGrader Loaded!");
-clientMessage("Warning : This version may contain some bugs!");
+clientMessage("TradinTable 1.2b Dev-Build 29(Soft) by 7thGrader Loaded!");
+clientMessage("Info : Try tapping ground with your slimeball!");
 }
 
-function useItem(x,y,z,i,b);
+function useItem(x,y,z,i,b)
 {
-//todo : use slimeball to directly convert placed block
+if(i==341&&Player.getCarriedItemCount()!=64)
+{
+addItemInventory(341, -1);
+if(b==2)
+{
+Level.setTile(x, y, z, 3);
 }
+else if(b==3)
+{
+Level.setTile(x, y, z, 12);
+}
+else if(b==12)
+{
+Level.setTile(x, y, z, 13);
+}
+else if(b==13)
+{
+Level.setTile(x, y, z, 2);
+}
+else
+{
+clientMessage("Oops. I think it cannot be converted.");
+}
+}
+else
+{
+clientMessage("You cannot convert stuffs if you have full stack on hand.");
+}
+}
+
+//1.2 dev29
 
 //Crafting Recipe Spam.
 Item.addShapedRecipe(341, 8, 0, ["ttt", "tjt", "ttt"], ["j", 265, 0, "t", 1, 0]);
