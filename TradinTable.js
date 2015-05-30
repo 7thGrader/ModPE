@@ -18,7 +18,7 @@ var dev = 30;
 function newLevel()
 {
 clientMessage("TradinTable 1.2b Dev-Build 30(Soft) by 7thGrader Loaded!");
-clientMessage("Info : Try tapping ground with your slimeball!");
+clientMessage("NEW : Try tapping ground with your slimeball!");
 }
 
 function useItem(x,y,z,i,b)
