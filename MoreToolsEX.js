@@ -1,5 +1,14 @@
 //MoreToolsEX ver 1.1.1b dev2 soft
 //by 7thGrader
+/*
+   Copyright 2015 7thGrader
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+*/
 var author = "7thGrader";
 var version = "1.1.1b dev2";
 

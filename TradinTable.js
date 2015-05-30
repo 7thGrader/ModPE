@@ -1,6 +1,14 @@
 //TradinTable 1.1.5b dev2 soft
 //by 7thGrader
+/*
+   Copyright 2015 7thGrader
 
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+*/
 //Orig. : http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1286564-equivalent-exchange-3-0-1-142
 
 var version = "1.1.5b dev2";
