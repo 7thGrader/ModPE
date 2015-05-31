@@ -1,4 +1,4 @@
-//TradinTable 1.2b dev38 non soft
+//TradinTable 1.2b dev39 soft
 //by 7thGrader
 /*
    Copyright 2015 7thGrader
@@ -11,11 +11,11 @@
 
 var version = "1.2";
 var beta = true;
-var dev = 38;
+var dev = 39;
 
 function newLevel()
 {
-clientMessage("TradinTable 1.2b Dev-Build 38(Non-Soft) by 7thGrader Loaded!");
+clientMessage("TradinTable 1.2b Dev-Build 39(Soft) by 7thGrader Loaded!");
 clientMessage("NEW : Try tapping ground with your slimeball!");
 }
 
@@ -118,12 +118,12 @@ Item.addShapedRecipe(3, 1, 0, ["mi ", "   ", "   "], ["i", 13, 0, "m", 341, 0]);
 Item.addShapedRecipe(13, 1, 0, ["mi ", "   ", "   "], ["i", 3, 0, "m", 341, 0]);
 Item.addShapedRecipe(12, 1, 0, ["mi ", "   ", "   "], ["i", 13, 0, "m", 341, 0]);
 Item.addShapedRecipe(13, 1, 0, ["mi ", "   ", "   "], ["i", 12, 0, "m", 341, 0]);
-Item.addShapedRecipe(3, 1, 0, ["mii", "iii", "iii"], ["i", 12, 0, "m", 341, 0]);
-Item.addShapedRecipe(12, 1, 0, ["mii", "iii", "iii"], ["i", 3, 0, "m", 341, 0]);
-Item.addShapedRecipe(3, 1, 0, ["mii", "iii", "iii"], ["i", 13, 0, "m", 341, 0]);
-Item.addShapedRecipe(13, 1, 0, ["mii", "iii", "iii"], ["i", 3, 0, "m", 341, 0]);
-Item.addShapedRecipe(13, 1, 0, ["mii", "iii", "iii"], ["i", 12, 0, "m", 341, 0]);
-Item.addShapedRecipe(12, 1, 0, ["mii", "iii", "iii"], ["i", 13, 0, "m", 341, 0]);
+Item.addShapedRecipe(3, 8, 0, ["mii", "iii", "iii"], ["i", 12, 0, "m", 341, 0]);
+Item.addShapedRecipe(12, 8, 0, ["mii", "iii", "iii"], ["i", 3, 0, "m", 341, 0]);
+Item.addShapedRecipe(3, 8, 0, ["mii", "iii", "iii"], ["i", 13, 0, "m", 341, 0]);
+Item.addShapedRecipe(13, 8, 0, ["mii", "iii", "iii"], ["i", 3, 0, "m", 341, 0]);
+Item.addShapedRecipe(13, 8, 0, ["mii", "iii", "iii"], ["i", 12, 0, "m", 341, 0]);
+Item.addShapedRecipe(12, 8, 0, ["mii", "iii", "iii"], ["i", 13, 0, "m", 341, 0]);
 //=====================================================//
 Item.addShapedRecipe(1, 1, 0, ["mi ", "   ", "   "], ["i", 4, 0, "m", 341, 0]);
 Item.addShapedRecipe(4, 1, 0, ["mi ", "   ", "   "], ["i", 1, 0, "m", 341, 0]);
@@ -131,11 +131,11 @@ Item.addShapedRecipe(1, 1, 0, ["mi ", "   ", "   "], ["i", 48, 0, "m", 341, 0]);
 Item.addShapedRecipe(48, 1, 0, ["mi ", "   ", "   "], ["i", 1, 0, "m", 341, 0]);
 Item.addShapedRecipe(4, 1, 0, ["mi ", "   ", "   "], ["i", 48, 0, "m", 341, 0]);
 Item.addShapedRecipe(48, 1, 0, ["mi ", "   ", "   "], ["i", 4, 0, "m", 341, 0]);
-Item.addShapedRecipe(1, 1, 0, ["mii", "iii", "iii"], ["i", 4, 0, "m", 341, 0]);
-Item.addShapedRecipe(4, 1, 0, ["mii", "iii", "iii"], ["i", 1, 0, "m", 341, 0]);
-Item.addShapedRecipe(1, 1, 0, ["mii", "iii", "iii"], ["i", 48, 0, "m", 341, 0]);
-Item.addShapedRecipe(48, 1, 0, ["mii", "iii", "iii"], ["i", 1, 0, "m", 341, 0]);
-Item.addShapedRecipe(4, 1, 0, ["mii", "iii", "iii"], ["i", 48, 0, "m", 341, 0]);
-Item.addShapedRecipe(48, 1, 0, ["mii", "iii", "iii"], ["i", 4, 0, "m", 341, 0]);
+Item.addShapedRecipe(1, 8, 0, ["mii", "iii", "iii"], ["i", 4, 0, "m", 341, 0]);
+Item.addShapedRecipe(4, 8, 0, ["mii", "iii", "iii"], ["i", 1, 0, "m", 341, 0]);
+Item.addShapedRecipe(1, 8, 0, ["mii", "iii", "iii"], ["i", 48, 0, "m", 341, 0]);
+Item.addShapedRecipe(48, 8, 0, ["mii", "iii", "iii"], ["i", 1, 0, "m", 341, 0]);
+Item.addShapedRecipe(4, 8, 0, ["mii", "iii", "iii"], ["i", 48, 0, "m", 341, 0]);
+Item.addShapedRecipe(48, 8, 0, ["mii", "iii", "iii"], ["i", 4, 0, "m", 341, 0]);
 
-// Tested : 765becdb51d48846877b94a27f53ae22
+// Tested : 0B13921089805DFFB25EFC2C2D266A9B1AFC115625DEA7C61E0023A9105884B0
