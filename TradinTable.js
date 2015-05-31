@@ -1,4 +1,4 @@
-//TradinTable 1.2b dev30 soft
+//TradinTable 1.2b dev32 soft
 //by 7thGrader
 /*
    Copyright 2015 7thGrader
@@ -13,11 +13,11 @@
 
 var version = "1.2";
 var beta = true;
-var dev = 30;
+var dev = 32;
 
 function newLevel()
 {
-clientMessage("TradinTable 1.2b Dev-Build 30(Soft) by 7thGrader Loaded!");
+clientMessage("TradinTable 1.2b Dev-Build 32(Non-Soft) by 7thGrader Loaded!");
 clientMessage("NEW : Try tapping ground with your slimeball!");
 }
 
@@ -47,10 +47,11 @@ else
 clientMessage("Oops. I think it cannot be converted.");
 }
 }
-else
+else if(i==341)
 {
 clientMessage("You cannot convert stuffs if you have full stack on hand.");
 }
+else return;
 }
 
 //1.2 dev29
