@@ -1,4 +1,4 @@
-//MoreToolsEX ver 1.1.1b dev3
+//MoreToolsEX ver 1.2b dev7
 //by 7thGrader
 /*
    Copyright 2015 7thGrader
@@ -10,11 +10,11 @@
        http://www.apache.org/licenses/LICENSE-2.0
 */
 var author = "7thGrader";
-var version = "1.1.1b dev3";
+var version = "1.2b dev7";
 
 function newLevel()
 {
-clientMessage("MoreToolsEX 1.1.1b Dev-Build 3 by 7thGrader Loaded!");
+clientMessage("MoreToolsEX 1.2b Dev-Build 7 by 7thGrader Loaded!");
 clientMessage("Warning : This version may contain some bugs!");
 }
 
@@ -27,6 +27,8 @@ ModPE.setItem(411, "book_enchanted", 0, "TimeSpell(Fast)");
 ModPE.setItem(412, "book_enchanted", 0, "TimeSpell(Normal)");
 ModPE.setItem(413, "book_enchanted", 0, "TimeSpell(Slow)");
 ModPE.setItem(414, "nether_star", 0, "Block Extractor");
+ModPE.setItem(415, "sword", 3, "Budder Sword");
+
 
 //Making Power Gem and Reverting
 Item.addFurnaceRecipe(57, 407, 1);
@@ -40,6 +42,7 @@ Item.addShapedRecipe(411, 1, 0, ["jlj", "ltl", "jjj"], ["j", 407, 0, "t", 277, 0
 Item.addShapedRecipe(412, 1, 0, ["jlj", "ltl", "jjj"], ["j", 407, 0, "t", 279, 0, "l", 347, 0]);
 Item.addShapedRecipe(413, 1, 0, ["jlj", "ltl", "jjj"], ["j", 407, 0, "t", 247, 0, "l", 347, 0]);
 Item.addShapedRecipe(414, 1, 0, ["jlj", "ltl", "jjj"], ["j", 407, 0, "t", 278, 0, "l", 388, 0]);
+Item.addShapedRecipe(415, 1, 0, ["jlj", "ltl", "jjj"], ["j", 407, 0, "t", 325, 10, "l", 259, 0]);
 
 //effect
 function useItem(x,y,z,i,b)
@@ -68,6 +71,16 @@ ModPE.setGameSpeed(10);
 if (i == 414)
 {
 Level.destroyBlock(x,y,z,true)
+}
+}
+
+function attackHook(a,v)
+{
+if (Player.getCarriedItem()==415)
+{
+Entity.setFireTicks(v, 9001);
+Entity.setHealth(v, 4);
+Entity.setVelY(v, 2);
 }
 }
 
