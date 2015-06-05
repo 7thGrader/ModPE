@@ -1,4 +1,4 @@
-//MoreToolsEX ver 1.2b dev9
+//MoreToolsEX ver 1.2b Stable
 //by 7thGrader
 /*
    Copyright 2015 7thGrader
@@ -10,11 +10,11 @@
        http://www.apache.org/licenses/LICENSE-2.0
 */
 var author = "7thGrader";
-var version = "1.2b dev9";
+var version = "1.2b Stable";
 
 function newLevel()
 {
-clientMessage("MoreToolsEX 1.2b Dev-Build 9(soft) by 7thGrader Loaded!");
+clientMessage("MoreToolsEX 1.2b Stable by 7thGrader Loaded!");
 }
 
 //setitem
@@ -50,31 +50,32 @@ if (i == 409)
 {
 explode(x,y,z,5);
 }
-if (i == 410)
+else if (i == 410)
 {
 clientMessage("Flight Enabled!");
 Player.setCanFly(1/0);
 }
-if (i == 411)
+else if (i == 411)
 {
 clientMessage("It feels weird..");
 ModPE.setGameSpeed(40);
 }
-if (i == 412)
+else if (i == 412)
 {
 clientMessage("Normal Speed!");
 ModPE.setGameSpeed(20);
 }
-if (i == 413)
+else if (i == 413)
 {
 clientMessage("Slow it down.");
 ModPE.setGameSpeed(10);
 }
-if (i == 414)
+else if (i == 414)
 {
 clientMessage("Block Extracted.");
 Level.destroyBlock(x,y,z,true)
 }
+else return;
 }
 
 function attackHook(a,v)
@@ -85,6 +86,7 @@ Entity.setFireTicks(v, 9001);
 Entity.setHealth(v, 3);
 Entity.setVelY(v, 2);
 }
+else return;
 }
 
 /*
