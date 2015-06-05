@@ -1,4 +1,4 @@
-//TradinTable 1.2b dev39 soft
+//TradinTable 1.2b Stable
 //by 7thGrader
 /*
    Copyright 2015 7thGrader
@@ -15,7 +15,7 @@ var dev = 39;
 
 function newLevel()
 {
-clientMessage("TradinTable 1.2b Dev-Build 39(Soft) by 7thGrader Loaded!");
+clientMessage("TradinTable 1.2b Stable by 7thGrader Loaded!");
 clientMessage("NEW : Try tapping ground with your slimeball!");
 }
 
