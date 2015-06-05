@@ -5,7 +5,7 @@
    You may obtain a copy of the License at
        http://www.apache.org/licenses/LICENSE-2.0
 CraftySkyAPI For MCPE
-Ver 0.1.0a
+Ver 0.1.1a
 
 WARNING : API Only. You have to configure stuffs to use this properly.
 PROTIP : You own parts you have contributed!
@@ -62,8 +62,6 @@ function myName()
 return Player.getName(Player.getEntity());
 }
 
-// min money
-
 
 
 // Commands
@@ -75,9 +73,18 @@ switch(c[0])
 case "money" :
 clientMessage(ChatColor.GOLD + "[CraftySky] You Have " + monetaryUnit + money);
 break;
+case "givemoney" :
+if(myName()==op)
+{
+giveMoney(c[1]);
+clientMessage(ChatColor.GOLD + "[CraftySky] Gave " + monetaryUnit + c[1] + " to Player");
 }
+else
+{
+clientMessage(ChatColor.RED + "[CraftySky] You Don't Have Permission to Use This Command");
 }
-
+break;
+}
 // Test Mode Only
 
 function useItem(x,y,z,i,b)
