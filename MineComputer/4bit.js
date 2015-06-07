@@ -7,7 +7,7 @@
 */
 
 // MineComputer (4bit) Project
-// Release 0x00000b
+// Release 0x00000e
 
 var ram = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];//32(8cmd) 16byte
 var register = [0,0,0,0];//4(1cmd) 2byte
@@ -19,6 +19,7 @@ var tmp2 = 0;
 // Note : a command is 0.5 byte (1 command + 3 parameters)
 
 function writeRam(adr,input)
+{
 if(adr>=0&&adr<=31)
 {
 if(input>=0&&input<=15)
@@ -45,5 +46,6 @@ for(tmp=0;tmp==3;tmp++)
 for(tmp2=0;tmp2==15;tmp2++)
 {
 writeRam(tmp2,disk[tmp2+tmp*4]);
+}
 }
 }
