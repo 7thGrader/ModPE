@@ -1,11 +1,19 @@
+/*
+   Copyright 2015 7thGrader
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+       http://www.apache.org/licenses/LICENSE-2.0
+*/
+
 var ram = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];//32(8cmd) 16byte(include cache)
 var register = [0,0,0,0];//4(1cmd) 2byte
-var disk = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];//128(32cmd) 64byte
+var disk = [1,15,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];//128(32cmd) 64byte
 var code = ["NUL","SET","RTN","PRT","IF","FOR","STR","END","INP"];
 var tmp = 0;
 var tmp2 = 0;
 var tmp3 = 0;
-// Note : a command is 0.5 byte (1 command + 3 parameters)
+// Note : a command is 2 byte (1 command + 3 parameters)
 
 function writeRam(adr,input)
 {
@@ -77,6 +85,11 @@ break;
 break;
 }
 return ram[31];
+}
+
+function useItem(x,y,z,i,b,id,bd)
+{
+clientMessage(runProgram());
 }
 
 function runProgram()
