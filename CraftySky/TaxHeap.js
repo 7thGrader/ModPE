@@ -7,7 +7,7 @@
 */
 
 // TaxHeap for CraftySkyAPI
-// ver 0.1.0a
+// ver 0.1.1a
 
 // Please copy full code to API.js
 
@@ -21,7 +21,10 @@ mca000003 += 1;
 if(mca000003 >= taxtick)
 {
 mca000003 = 0;
+if(money-tax>=0)
+{
 clientMessage("[TaxHeap]Tax Taken(" + monetaryUnit + tax + ")");
 money -= tax;
+}
 }
 }
