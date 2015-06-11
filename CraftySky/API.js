@@ -5,7 +5,7 @@
    You may obtain a copy of the License at
        http://www.apache.org/licenses/LICENSE-2.0
 CraftySkyAPI For MCPE
-Ver 0.1.2a
+Ver 0.2.0a
 
 WARNING : API Only. You have to configure stuffs to use this properly.
 PROTIP : You own parts you have contributed!
@@ -16,12 +16,13 @@ PROTIP : You own parts you have contributed!
 // Configs (Configureable)
 // Stuffs Starting with mca is usually dangerous.
 
-var loginmsg = "CraftySky 0.1.2a by 7thGrader Successfully Loaded!"
+var loginmsg = "CraftySky 0.2.0a by 7thGrader Successfully Loaded!"
 var money = 100; // Base Money
 var mca000001 = 0; // (Do Not Edit!)
 var monetaryUnit = "$";// Monetary Unit
 var mca000002 = true; // (Test Mode)
 var op = "Angeloid"; // Admin Name(CANNOT BE MULTIPLE)
+var MyMoney; // DataSave
 
 // New Methods
 
@@ -116,4 +117,10 @@ else return;
 function newLevel()
 {
 clientMessage(loginmsg);
+ModPE.readData(MyMoney);
+}
+
+function leaveGame()
+{
+ModPE.saveData(MyMoney, money);
 }
