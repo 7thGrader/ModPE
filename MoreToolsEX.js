@@ -1,4 +1,4 @@
-//MoreToolsEX ver 1.2b Stable
+//MoreToolsEX ver 1.3b dev2
 //by 7thGrader
 /*
    Copyright 2015 7thGrader
@@ -10,11 +10,11 @@
        http://www.apache.org/licenses/LICENSE-2.0
 */
 var author = "7thGrader";
-var version = "1.2b Stable";
+var version = "1.3b dev2";
 
 function newLevel()
 {
-clientMessage("MoreToolsEX 1.2b Stable by 7thGrader Loaded!");
+clientMessage("MoreToolsEX 1.3b dev2 by 7thGrader Loaded!");
 }
 
 //setitem
@@ -75,6 +75,12 @@ else if (i == 414)
 clientMessage("Block Extracted.");
 Level.destroyBlock(x,y,z,true)
 }
+else if(b==57&&i==331&&getTile(x,y-1,z)==46)
+{
+addItemInventory(407, 2);
+explode(x, y, z, 4);
+clientMessage("Boom!");
+}
 else return;
 }
 
@@ -88,6 +94,7 @@ Entity.setVelY(v, 2);
 }
 else return;
 }
+
 
 /*
 Tested : 3cf975f47c7489ff5565e72b19db581c
