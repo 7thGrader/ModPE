@@ -12,5 +12,5 @@
 
 function modTick()
 {
-ModPE.showTipMessage("§e[Money] " + money);
+ModPE.showTipMessage("§e[ Money ] : " + money);
 }
