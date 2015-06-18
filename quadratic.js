@@ -1,6 +1,3 @@
-// Author : 7thGrader
-// Read LICENSE File
-
 var a = 0;
 var b = 0;
 var c = 0;
@@ -13,14 +10,14 @@ function procCmd(cmd)
 {
 var cd = cmd.split(" ");
 if(cd[0] == seteq)
-{
+{cc
 a = cd[1];
 b = cd[2];
 c = cd[3];
 }
 else if(cd[0] == solveeq)
 {
-4acb2 = (4*a*c)-Math.pow(b,2);
+4acb2 = Math.pow(b,2) - (4*a*c) ;
 ansexc[0] = -1*b;
 ansexc[1] = 4acb2;
 ansexc[2] = 2*a;
@@ -40,7 +37,7 @@ if(4acb2>=0)
 {
 clientMessage(((-1*b) + (Math.sqrt(4acb2)))/(2*a));
 clientMessage(((-1*b) - (Math.sqrt(4acb2)))/(2*a));
-else clientMessage("Try use /solve");
+else clientMessage("Try use /solveeq");
 }
 }
 else return;
