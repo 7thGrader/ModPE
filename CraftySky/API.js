@@ -118,65 +118,6 @@ if(b==3)
 Economy.giveMoney(1);
 }
 else if(b==1)
-{
-Economy.takeMoney(1);
-}
-else if(b==17)
-{
-Economy.setMoney(100);
-}
-clientMessage(money);
-}
-else return;
-}
-
-// Misc.
-
-function newLevel()
-{
-clientMessage(loginmsg);
-ModPE.readData(MyMoney);
-}
-
-function leaveGame()
-{
-ModPE.saveData(MyMoney, money);
-}
-/ Commands
-function procCmd(cmd)
-{
-var c = cmd.split(" ");
-switch(c[0])
-{
-case "money" :
-clientMessage(ChatColor.GOLD + "[CraftySky] You Have " + monetaryUnit + money);
-break;
-case "givemoney" :
-if(myName()==op)
-{
-Economy.giveMoney(Number(c[1]));
-clientMessage(ChatColor.GOLD + "[CraftySky] Gave " + monetaryUnit + c[1] + " to Player");
-}
-else
-{
-clientMessage(ChatColor.RED + "[CraftySky] You Don't Have Permission to Use This Command");
-}
-break;
-}
-}
-
-// Test Mode Only
-
-function useItem(x,y,z,i,b)
-{
-if(mca000002 == true && myName()==op)
-{
-if(b==3)
-{
-Economy.giveMoney(1);
-}
-else if(b==1)
-{
 Economy.takeMoney(1);
 }
 else if(b==17)
