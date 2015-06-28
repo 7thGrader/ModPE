@@ -5,7 +5,7 @@
    You may obtain a copy of the License at
        http://www.apache.org/licenses/LICENSE-2.0
 CraftySkyAPI For MCPE
-Ver 0.2.1a (API 1.1)
+Ver 0.2.2a (API 1.1.1)
 
 WARNING : API Only. You have to configure stuffs to use this properly.
 PROTIP : You own parts you have contributed!
@@ -16,12 +16,14 @@ PROTIP : You own parts you have contributed!
 // Configs (Configureable)
 // Stuffs Starting with mca is usually dangerous.
 
-var loginmsg = "CraftySky 0.2.1a by 7thGrader Successfully Loaded!"
+var loginmsg = "CraftySky 0.2.2a by 7thGrader Successfully Loaded!"
 var money = 100; // Base Money
 var mca000001 = 0; // (Do Not Edit!)
 var monetaryUnit = "$";// Monetary Unit
 var mca000002 = true; // (Test Mode)
 var op = "Angeloid"; // Admin Name(CANNOT BE MULTIPLE)
+var extraCurrency = [];
+var extraUnit = [];
 var MyMoney;
 
 // New Methods
@@ -32,7 +34,7 @@ giveMoney(par1double); : gives player money(alias of money += par1int)
 takeMoney(par1double); : takes player money(alias of money -= par1int)
 setMoney(par1double); : sets player money(alias of money = par1int)
 getMoney(); : returns player money. mostly useless.
-trade(par1double, par2int, par3int, par4int); : adds money and item at once. you can use negative ;parameter. made for trade.(Not recommended)
+trade(par1double, par2int, par3int, par4int); : adds money and item at once. you can use negative ;parameter. made for trade.(Deprecated)
 	Global Namespace
 myName(); : Shows player name
 */
@@ -56,23 +58,24 @@ getMoney : function()
 {
 return money;
 },
-trade : function (moneyaddint, itemaddint, countint, itemdmgint)
+trade : function(moneyaddint, itemaddint, countint, itemdmgint)
 {
 money += moneyaddint;
 Player.addItemInventory(itemaddint, countint, itemdmgint);
 return;
 }
 }
-
-//Example
-function newLevel(){
-ModPE.addMessage('yoooo');
-ModPE.addMessage('yoooo!!');
-ModPE.addMessage('yoooo.....!!!');
-ModPE.addMessage('Hi, this ModPE!!)))');
-ModPE.addPrint('Yoooo!!');
-ModPE.addPrint('Yoooo!!');
-ModPE.addPrint('Yoooo!!');
+var Currency = {
+addNewCurrency : function(unitString) {
+extraCurrency.push(0);
+extraUnit.push(unitString);
+},
+setNewCurrency : function(idint, valuedouble) {
+extraCurrency[idint] = valuedouble;
+},
+getNewCurrency : function(idint) {
+return extraCurrency[idint];
+}
 }
 function myName()
 {
