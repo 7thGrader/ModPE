@@ -118,6 +118,7 @@ if(b==3)
 Economy.giveMoney(1);
 }
 else if(b==1)
+{
 Economy.takeMoney(1);
 }
 else if(b==17)
