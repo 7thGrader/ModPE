@@ -11,7 +11,7 @@ var lottowin = 50000;
 var Gamble = {
 normalGamble:function(gamblemoney)
 {
-if(Economy.getMoney>=gamblemoney) {
+if(Economy.getMoney()>=gamblemoney) {
 if(Math.random() <= winrate)
 {
 Economy.giveMoney(gamblemoney);
@@ -24,11 +24,24 @@ clientMessage("Gamble Fail..");
 }
 return;
 },
+autoGamble:function()
+{
+if(Math.random() <= winrate)
+{
+Economy.giveMoney(Economy.getMoney()*Math.random());
+clientMessage("Gamble Success!");
+}
+else {
+Economy.takeMoney(Economy.getMoney()*Math.random());
+clientMessage("Gamble Fail..");
+}
+return;
+},
 buyLottery:function()
 {
-if(Economy.getMoney>=lottoprice)
+if(Economy.getMoney()>=lottoprice)
 {
-if(Math.random<=lottowinrate)
+if(Math.random()<=lottowinrate)
 {
 Economy.giveMoney(lottowin);
 clientMessage("Lotto Win!");
