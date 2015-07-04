@@ -14,6 +14,7 @@
 var tax = 1; // Amount of tax
 var taxtick = 1200; // Every configured ticks, Tax will be taken
 var mca000003 = 0; // Do Not Edit!
+var notaxlimit = 0; // If player have lesser money than this value, tax won't be taken.
 
 function modTick()
 {
@@ -21,7 +22,7 @@ mca000003 += 1;
 if(mca000003 >= taxtick)
 {
 mca000003 = 0;
-if(money-tax>=0)
+if(money-tax>=notaxlimit)
 {
 clientMessage("[TaxHeap]Tax Taken(" + monetaryUnit + tax + ")");
 money -= tax;
