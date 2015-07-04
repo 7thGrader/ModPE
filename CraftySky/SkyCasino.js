@@ -61,4 +61,8 @@ else if(Level.getSignText(x, y, z, 0)=="[Lottery]");
 {
 Gamble.buyLottery();
 }
+else if(Level.getSignText(x, y, z, 0)=="[AutoGamble]");
+{
+Gamble.autoGamble();
+}
 }
