@@ -11,10 +11,11 @@
 */
 var author = "7thGrader";
 var version = "1.3b dev2";
+var bb = [0,0,0,0,0];
 
 function newLevel()
 {
-clientMessage("MoreToolsEX 1.3b dev2 by 7thGrader Loaded!");
+clientMessage("MoreToolsEX 1.3b dev4 by 7thGrader Loaded!");
 }
 
 //setitem
@@ -27,6 +28,7 @@ ModPE.setItem(412, "book_enchanted", 0, "TimeSpell(Normal)");
 ModPE.setItem(413, "book_enchanted", 0, "TimeSpell(Slow)");
 ModPE.setItem(414, "nether_star", 0, "Block Extractor");
 ModPE.setItem(415, "sword", 3, "Budder Sword");
+ModPE.setItem(416, "bucket", 0, "Block Bucket");
 
 
 //Making Power Gem and Reverting
@@ -80,6 +82,24 @@ else if(b==57&&i==331&&getTile(x,y-1,z)==46)
 addItemInventory(407, 2);
 explode(x, y, z, 4);
 clientMessage("Boom!");
+}
+else if(i==416)
+{
+if(bb[0]==0)
+{
+bb[1]=x;
+bb[2]=y;
+bb[3]=z;
+bb[0]=1;
+}
+else if(bb[0]==1)
+{
+bb[0]=0;
+bb[4]=getTile(bb[1],bb[2],bb[3]);
+setTile(bb[1],bb[2],bb[3],getTile(x,y,z));
+setTile(x,y,z,bb[4]);
+}
+else bb[0]=0;
 }
 else return;
 }
